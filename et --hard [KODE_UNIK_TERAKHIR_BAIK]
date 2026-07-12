@@ -1,0 +1,26 @@
+[33m166973c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Hapus variabel ct yang tertinggal
+[33m6b27556[m Hapus variabel ct yang tertinggal
+[33m4693dc8[m Hapus karakter berlebih dan perbaiki struktur
+[33mdab2ff1[m Perbaiki referensi slide agar tidak error saat build
+[33mdd9f14a[m Bersihkan sintaks gambar
+[33m2fd8f18[m Paksa pakai link gambar asli
+[33mb413af9[m Perbaiki tanda kutip link gambar
+[33m28795c2[m Update link gambar ke Imgur
+[33m8237ad3[m Memperbaiki koma pada objek stats
+[33mec8ed82[m Perbaiki tanda kutip deskripsi
+[33m21e910c[m Hapus tanda titik tiga dan bersihkan koma
+[33mb2a9828[m Memperbaiki penulisan use client
+[33mcb3208d[m Perbaiki tanda koma dan config
+[33m23200ab[m Memperbaiki teks dan membuka kunci gambar
+[33m9bb74a3[m Mengubah isi teks dan foto
+[33m82b1cdf[m Memindahkan folder components ke lokasi yang benar
+[33mc24ae9a[m Memasukkan file CinemaReel ke folder components
+[33m93155bd[m Memperbaiki posisi folder components
+[33mc3bcced[m Ubah ke mode static export
+[33m66b0225[m Upload proyek final sukses
+[33mccb2aea[m Delete node_modules directory
+[33m5117ab2[m "Setup Nextjs lengkap".
+[33ma97df41[m Delete index.tsx
+[33m59380b9[m Rename index to index.tsx
+[33m3a82845[m Rename Tes to index
+[33mb49bdb1[m Create Tes
