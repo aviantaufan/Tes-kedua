@@ -1,0 +1,9 @@
+import CinemaReel from "@/components/CinemaReel";
+
+export default function Home() {
+  return (
+    <main>
+      <CinemaReel />
+    </main>
+  );
+}
