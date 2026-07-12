@@ -234,17 +234,14 @@ export default function CinemaReel({ className }: { className?: string }) {
   const navigateToModRef = useRef<(target: number) => void>(() => {});
 
   useEffect(() => {
-  img.src = slide.imageId;
-}, [slide.imageId]);
-useEffect
-
-
-  useEffect(() => {
-    SLIDES.forEach((slide) => {
-      const img = new Image();
-img.src = slide.imageId;    });
-  }, [imgDims.w, imgDims.h]);
-
+      if (typeof window !== 'undefined') {
+          SLIDES.forEach((slide) => {
+                const img = new Image();
+                      img.src = slide.imageId; // Ini akan mengambil langsung dari link Anda
+                          });
+                            }
+                            }, []);
+  })
   useEffect(() => {
     if (typeof window === "undefined" || !sectionRef.current || !trackRef.current) return;
     const section = sectionRef.current;
