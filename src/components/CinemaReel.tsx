@@ -1,4 +1,4 @@
-use client";
+"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { Playfair_Display } from "next/font/google";
