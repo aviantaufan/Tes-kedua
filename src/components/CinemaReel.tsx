@@ -41,7 +41,7 @@ interface Slide {
 
 /* ─── Section Data ────────────────────────────────────────────────────── */
 const SLIDES: Slide[] = [
- {
+  {
   id: "pemasangan WPC",
   badge: "Wpc dan Wall Board",
   eyebrow: "wpc & wallboard 2026",
@@ -243,8 +243,7 @@ export default function CinemaReel({ className }: { className?: string }) {
   useEffect(() => {
     SLIDES.forEach((slide) => {
       const img = new Image();
-      img.src = `https://images.unsplash.com/photo-${slide.imageId}?w=${imgDims.w}&h=${imgDims.h}&fit=crop&q=75&auto=format`;
-    });
+img.src = slide.imageId;    });
   }, [imgDims.w, imgDims.h]);
 
   useEffect(() => {
@@ -735,8 +734,7 @@ function SlideFrame({ slide, isFirst, imgDims, slotIndex, autoScrolling, isOpen,
              boxShadow: isOpen ? "0 30px 80px -20px rgba(0,0,0,0.55), 0 8px 30px -10px rgba(0,0,0,0.35)" : undefined,
            }}>
         <div data-slide-image style={{ position: "absolute", top: "50%", left: "50%", width: "100vw", height: `${IMG_HEIGHT_RATIO * 100}dvh`, marginTop: `${-IMG_HEIGHT_RATIO * 50}dvh`, marginLeft: "-50vw", willChange: "transform" }}>
-          <img src={`https://images.unsplash.com/photo-${slide.imageId}?w=${imgDims.w}&h=${imgDims.h}&fit=crop&q=75&auto=format`} alt="" loading="eager" decoding="async" fetchPriority={isFirst ? "high" : "auto"} draggable={false} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.06) 22%, rgba(0,0,0,0.04) 70%, rgba(0,0,0,0.55) 100%)" }} />
+src={slide.imageId}          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.06) 22%, rgba(0,0,0,0.04) 70%, rgba(0,0,0,0.55) 100%)" }} />
           <div className="absolute inset-0" style={{ background: "radial-gradient(80% 70% at 50% 50%, transparent 40%, rgba(0,0,0,0.45) 100%)" }} />
         </div>
         <div data-slide-content className="absolute inset-0 will-change-[opacity,filter,transform]" style={{ opacity: 0, filter: "blur(16px)" }}>
@@ -837,8 +835,7 @@ function DetailsPanel({ open, slide, imgDims, onClose }: any) {
           <>
             <div className="h-full w-full overflow-y-auto" style={{ overscrollBehavior: "contain", touchAction: "pan-y" }}>
               <div className="relative w-full overflow-hidden" style={{ height: "35dvh", flexShrink: 0 }}>
-                <img src={`https://images.unsplash.com/photo-${slide.imageId}?w=${imgDims.w}&h=${Math.round(imgDims.h * 0.6)}&fit=crop&q=80&auto=format`} alt="" draggable={false} className="absolute inset-0 h-full w-full" style={{ objectFit: "cover" }} />
-                <div className="absolute inset-x-0 bottom-0 h-1/2" style={{ background: "linear-gradient(180deg, rgba(10,9,8,0) 0%, rgba(10,9,8,0.85) 80%, rgba(10,9,8,1) 100%)" }} />
+src={slide.imageId}                <div className="absolute inset-x-0 bottom-0 h-1/2" style={{ background: "linear-gradient(180deg, rgba(10,9,8,0) 0%, rgba(10,9,8,0.85) 80%, rgba(10,9,8,1) 100%)" }} />
               </div>
               <div className="px-[3.5dvh] pb-[4dvh] pt-[1dvh]">
                 <div className="text-[10px] font-medium uppercase tracking-[0.36em] text-white/55">{slide.eyebrow}</div>
