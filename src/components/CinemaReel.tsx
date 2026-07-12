@@ -237,10 +237,10 @@ export default function CinemaReel({ className }: { className?: string }) {
       if (typeof window !== 'undefined') {
           SLIDES.forEach((slide) => {
                 const img = new Image();
-                      img.src = slide.imageId; // Ini akan mengambil langsung dari link Anda
+                      img.src = slide.imageId;
                           });
                             }
-                            }, []);ct
+                            }, []);
   useEffect(() => {
     if (typeof window === "undefined" || !sectionRef.current || !trackRef.current) return;
     const section = sectionRef.current;
