@@ -233,7 +233,10 @@ export default function CinemaReel({ className }: { className?: string }) {
 
   const navigateToModRef = useRef<(target: number) => void>(() => {});
 
-  useEffect(() => {img.src = slide.imageId;," }
+  useEffect(() => {
+  img.src = slide.imageId;
+}, [slide.imageId]);
+useEffect
 
 
   useEffect(() => {
