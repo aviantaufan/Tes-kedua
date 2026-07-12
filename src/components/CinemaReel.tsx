@@ -1,4 +1,4 @@
-"use client";
+use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { Playfair_Display } from "next/font/google";
@@ -49,11 +49,9 @@ const SLIDES: Slide[] = [
   titleLines: ["Pemasangan Wallpanel dan Wallboard"], // Judul utama (Bisa dipisah jadi beberapa baris)
   date: "April, 2026",
   director: "Tukang Interior Batam",
-  imageId: "https://imagizer.imageshack.com/img924/4595/IvPnzu.png", "https://imagizer.imageshack.com/img924/9430/OkaPCp.png", "https://imagizer.imageshack.com/img923/7527/fw36ln.png"
+  imageId: "https://imagizer.imageshack.com/img924/4595/IvPnzu.png",
   awards: [ ... ],
-  description: "Desain yang baik tidak sekadar indah dipandang, tetapi juga harus membawa ketenangan bagi penghuninya. Instalasi panel dinding bertekstur rapi, pencahayaan ruang yang terukur, dan detail pengerjaan yang halus. merupakan elemen kunci untuk menciptakan nuansa modern luxury yang tak lekang oleh waktu.
-
-Merencanakan visualisasi desain adalah langkah pertama yang krusial sebelum memulai renovasi. Bagi Anda yang berencana memperbarui tampilan ruang keluarga, kamar, atau area komersial di Batam dan sekitarnya, kami hadir untuk membantu mewujudkan konsep tersebut dengan nyata. Mari mulai obrolan santai tentang ruang impian Anda.
+  description: "Desain yang baik tidak sekadar indah dipandang, tetapi juga harus membawa ketenangan bagi penghuninya. Instalasi panel dinding bertekstur rapi, pencahayaan ruang yang terukur, dan detail pengerjaan yang halus. merupakan elemen kunci untuk menciptakan nuansa modern luxury yang tak lekang oleh waktu.merencanakan visualisasi desain adalah langkah pertama yang krusial sebelum memulai renovasi. Bagi Anda yang berencana memperbarui tampilan ruang keluarga, kamar, atau area komersial di Batam dan sekitarnya, kami hadir untuk membantu mewujudkan konsep tersebut dengan nyata. Mari mulai obrolan santai tentang ruang impian Anda.
   stats: { critics: 94, audience: 81, runtime: "1h 38m", format: "16MM", country: "UK · GERMANY", language: "ENGLISH", aspect: "1.66:1" },
 },,
   {
