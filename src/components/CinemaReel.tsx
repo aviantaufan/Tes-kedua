@@ -240,8 +240,7 @@ export default function CinemaReel({ className }: { className?: string }) {
                       img.src = slide.imageId; // Ini akan mengambil langsung dari link Anda
                           });
                             }
-                            }, []);
-  })
+                            }, []);ct
   useEffect(() => {
     if (typeof window === "undefined" || !sectionRef.current || !trackRef.current) return;
     const section = sectionRef.current;
