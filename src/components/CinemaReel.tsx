@@ -678,7 +678,8 @@ export default function CinemaReel({ className }: { className?: string }) {
               autoScrolling={autoScrolling}
               isOpen={openSlideKey === slide.id && modN(i) === activeIdx}
               onExplore={() => setOpenSlideKey(slide.id)}
-assignRef={(el: any) => { slideRefs.current[i] = el; }}            />
+              assignRef={(el) => { slideRefs.current[i] = el; }}
+            />
           );
         })}
       </div>
@@ -693,7 +694,8 @@ assignRef={(el: any) => { slideRefs.current[i] = el; }}            />
              style={{ backgroundImage: "repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 3px)", opacity: 1 }} />
       )}
 
-onPipClick={(i: number) => navigateToModRef.current(i)}      
+      <ReelIndicator activeIdx={activeIdx} total={N_SLIDES} hidden={openSlideKey !== null} onPipClick={(i) => navigateToModRef.current(i)} />
+      
       <DetailsPanel open={openSlideKey !== null} slide={SLIDES.find(s => s.id === openSlideKey) || SLIDES[0]} imgDims={imgDims} onClose={() => setOpenSlideKey(null)} />
 
       <div ref={cursorRef} className="pointer-events-none fixed left-0 top-0 z-50" style={{ width: CURSOR_SIZE, height: CURSOR_SIZE, opacity: 0, willChange: "transform, opacity" }}>
