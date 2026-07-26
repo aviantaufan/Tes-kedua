@@ -678,7 +678,7 @@ export default function CinemaReel({ className }: { className?: string }) {
               autoScrolling={autoScrolling}
               isOpen={openSlideKey === slide.id && modN(i) === activeIdx}
               onExplore={() => setOpenSlideKey(slide.id)}
-              assignRef={(el) => { slideRefs.current[i] = el; }}
+              assignRef={(el: any) => { slideRefs.current[i] = el; }}
             />
           );
         })}
@@ -693,7 +693,10 @@ export default function CinemaReel({ className }: { className?: string }) {
         <div ref={scanlinesRef} aria-hidden className="pointer-events-none absolute inset-0 z-25 mix-blend-screen"
              style={{ backgroundImage: "repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 3px)", opacity: 1 }} />
       )}
-
+<DetailsPanel 
+  hidden={openSlideKey !== null} 
+  onPipClick={(i: number) => navigateToModRef.current(i)} 
+/>
       <ReelIndicator activeIdx={activeIdx} total={N_SLIDES} hidden={openSlideKey !== null} onPipClick={(i) => navigateToModRef.current(i)} />
       
       <DetailsPanel open={openSlideKey !== null} slide={SLIDES.find(s => s.id === openSlideKey) || SLIDES[0]} imgDims={imgDims} onClose={() => setOpenSlideKey(null)} />
