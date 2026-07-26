@@ -697,7 +697,7 @@ export default function CinemaReel({ className }: { className?: string }) {
   hidden={openSlideKey !== null} 
   onPipClick={(i: number) => navigateToModRef.current(i)} 
 />
-      <ReelIndicator activeIdx={activeIdx} total={N_SLIDES} hidden={openSlideKey !== null} onPipClick={(i) => navigateToModRef.current(i)} />
+      <ReelIndicator activeIdx={activeIdx} total={N_SLIDES} hidden={openSlideKey !== null} onPipClick={(i: number) => navigateToModRef.current(i)} />
       
       <DetailsPanel open={openSlideKey !== null} slide={SLIDES.find(s => s.id === openSlideKey) || SLIDES[0]} imgDims={imgDims} onClose={() => setOpenSlideKey(null)} />
 
