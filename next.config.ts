@@ -15,12 +15,6 @@ const nextConfig: NextConfig = {
   },
 };
 
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: "export", // <--- Tambahkan baris ini
-  
-  // (Jika ada pengaturan lain di sini sebelumnya, biarkan saja)
-};
+;
 
 export default nextConfig;
