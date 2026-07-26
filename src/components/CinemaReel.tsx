@@ -49,7 +49,7 @@ const SLIDES: Slide[] = [
     titleLines: ["BLUEPRINT", "NO. 7"],
     year: "2024",
     director: "SAM BINNS",
-    imageId: "1610847455028-9e55e62bac33",
+    imageId: "https://res.cloudinary.com/hvlp65zl/image/upload/v1785079593/file_0000000042f072089da5b49504def5a5_knmywh.png",
     awards: [
       { stars: 5, label: "TRUE LIFE FUND", quote: "A PORTRAIT OF NOW" },
       { stars: 4, label: "BEST FIRST FEATURE", quote: "RAW & UNNERVING" },
