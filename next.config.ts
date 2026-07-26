@@ -1,20 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com", // Ganti dengan domain gambar Anda jika pakai Cloudinary
-      },
-      {
-        protocol: "https",
-        hostname: "i.imgur.com", // Jika menggunakan Imgur
-      },
-    ],
+    unoptimized: true,
   },
 };
-
-;
 
 export default nextConfig;
