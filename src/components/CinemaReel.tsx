@@ -42,18 +42,23 @@ interface Slide {
 /* ─── Section Data ────────────────────────────────────────────────────── */
 const SLIDES: Slide[] = [
   {
-  id: "pemasangan WPC",
-  badge: "Wpc dan Wall Board",
-  eyebrow: "wpc & wallboard 2026",
-  category: "interior",
-  titleLines: ["Pemasangan Wallpanel dan Wallboard"], // Judul utama (Bisa dipisah jadi beberapa baris)
-  date: "April, 2026",
-  director: "Tukang Interior Batam",
-imageid: "https://images.unsplash.com/photo-1783717408828-56975eb28099?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  awards: [],
-  description: "Desain yang baik tidak sekadar indah dipandang, tetapi juga harus membawa ketenangan bagi penghuninya. Instalasi panel dinding bertekstur rapi, pencahayaan ruang yang terukur, dan detail pengerjaan yang halus. merupakan elemen kunci untuk menciptakan nuansa modern luxury yang tak lekang oleh waktu.merencanakan visualisasi desain adalah langkah pertama yang krusial sebelum memulai renovasi. Bagi Anda yang berencana memperbarui tampilan ruang keluarga, kamar, atau area komersial di Batam dan sekitarnya, kami hadir untuk membantu mewujudkan konsep tersebut dengan nyata. Mari mulai obrolan santai tentang ruang impian Anda.",
-  stats: { critics: "94", audience: "81", runtime: "1h 38m", format: "16MM", country: "UK · GERMANY", language: "ENGLISH", aspect: "1.66:1" },
-},
+    id: "blueprint-no-seven",
+    badge: "true.false",
+    eyebrow: "TRUE/FALSE · TRUE LIFE FUND 2024",
+    category: "HYBRID DOCUMENTARY",
+    titleLines: ["BLUEPRINT", "NO. 7"],
+    year: "2024",
+    director: "SAM BINNS",
+    imageId: "1610847455028-9e55e62bac33",
+    awards: [
+      { stars: 5, label: "TRUE LIFE FUND", quote: "A PORTRAIT OF NOW" },
+      { stars: 4, label: "BEST FIRST FEATURE", quote: "RAW & UNNERVING" },
+      { stars: 5, label: "CRITICS PRIZE", quote: "ESSENTIAL VIEWING" },
+    ],
+    description:
+      "An architect of the everyday traces seven anonymous lives across a single city block. Captured in long, unblinking takes, the film constructs an atlas of urban intimacy — strangers passing as a single organism, separated only by the gravity of their private orbits.",
+    stats: { critics: 94, audience: 81, runtime: "1h 38m", format: "16MM", country: "UK · GERMANY", language: "ENGLISH", aspect: "1.66:1" },
+  },
   {
     id: "atlas-unfolds",
     badge: "berlinale",
@@ -235,13 +240,16 @@ export default function CinemaReel({ className }: { className?: string }) {
   const navigateToModRef = useRef<(target: number) => void>(() => {});
 
   useEffect(() => {
-      if (typeof window !== 'undefined') {
-          SLIDES.forEach((slide) => {
-                const img = new Image();
-                      img.src = slide.imageId;
-                          });
-                            }
-                            }, []);
+    setImgDims(computeImgDims());
+  }, []);
+
+  useEffect(() => {
+    SLIDES.forEach((slide) => {
+      const img = new Image();
+      img.src = `https://images.unsplash.com/photo-${slide.imageId}?w=${imgDims.w}&h=${imgDims.h}&fit=crop&q=75&auto=format`;
+    });
+  }, [imgDims.w, imgDims.h]);
+
   useEffect(() => {
     if (typeof window === "undefined" || !sectionRef.current || !trackRef.current) return;
     const section = sectionRef.current;
@@ -730,7 +738,8 @@ function SlideFrame({ slide, isFirst, imgDims, slotIndex, autoScrolling, isOpen,
              boxShadow: isOpen ? "0 30px 80px -20px rgba(0,0,0,0.55), 0 8px 30px -10px rgba(0,0,0,0.35)" : undefined,
            }}>
         <div data-slide-image style={{ position: "absolute", top: "50%", left: "50%", width: "100vw", height: `${IMG_HEIGHT_RATIO * 100}dvh`, marginTop: `${-IMG_HEIGHT_RATIO * 50}dvh`, marginLeft: "-50vw", willChange: "transform" }}>
-src={slide.imageId}          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.06) 22%, rgba(0,0,0,0.04) 70%, rgba(0,0,0,0.55) 100%)" }} />
+          <img src={`https://images.unsplash.com/photo-${slide.imageId}?w=${imgDims.w}&h=${imgDims.h}&fit=crop&q=75&auto=format`} alt="" loading="eager" decoding="async" fetchPriority={isFirst ? "high" : "auto"} draggable={false} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.06) 22%, rgba(0,0,0,0.04) 70%, rgba(0,0,0,0.55) 100%)" }} />
           <div className="absolute inset-0" style={{ background: "radial-gradient(80% 70% at 50% 50%, transparent 40%, rgba(0,0,0,0.45) 100%)" }} />
         </div>
         <div data-slide-content className="absolute inset-0 will-change-[opacity,filter,transform]" style={{ opacity: 0, filter: "blur(16px)" }}>
@@ -831,7 +840,8 @@ function DetailsPanel({ open, slide, imgDims, onClose }: any) {
           <>
             <div className="h-full w-full overflow-y-auto" style={{ overscrollBehavior: "contain", touchAction: "pan-y" }}>
               <div className="relative w-full overflow-hidden" style={{ height: "35dvh", flexShrink: 0 }}>
-src={slide.imageId}                <div className="absolute inset-x-0 bottom-0 h-1/2" style={{ background: "linear-gradient(180deg, rgba(10,9,8,0) 0%, rgba(10,9,8,0.85) 80%, rgba(10,9,8,1) 100%)" }} />
+                <img src={`https://images.unsplash.com/photo-${slide.imageId}?w=${imgDims.w}&h=${Math.round(imgDims.h * 0.6)}&fit=crop&q=80&auto=format`} alt="" draggable={false} className="absolute inset-0 h-full w-full" style={{ objectFit: "cover" }} />
+                <div className="absolute inset-x-0 bottom-0 h-1/2" style={{ background: "linear-gradient(180deg, rgba(10,9,8,0) 0%, rgba(10,9,8,0.85) 80%, rgba(10,9,8,1) 100%)" }} />
               </div>
               <div className="px-[3.5dvh] pb-[4dvh] pt-[1dvh]">
                 <div className="text-[10px] font-medium uppercase tracking-[0.36em] text-white/55">{slide.eyebrow}</div>

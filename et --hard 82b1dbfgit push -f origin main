@@ -1,0 +1,11 @@
+[33mfbc5b98[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m 82b1dbf
+[33m166973c[m Hapus variabel ct yang tertinggal
+[33m6b27556[m Hapus variabel ct yang tertinggal
+[33m4693dc8[m Hapus karakter berlebih dan perbaiki struktur
+[33mdab2ff1[m Perbaiki referensi slide agar tidak error saat build
+[33mdd9f14a[m Bersihkan sintaks gambar
+[33m2fd8f18[m Paksa pakai link gambar asli
+[33mb413af9[m Perbaiki tanda kutip link gambar
+[33m28795c2[m Update link gambar ke Imgur
+[33m8237ad3[m Memperbaiki koma pada objek stats
+[33mec8ed82[m Perbaiki tanda kutip deskripsi
