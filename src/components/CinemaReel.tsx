@@ -678,8 +678,7 @@ export default function CinemaReel({ className }: { className?: string }) {
               autoScrolling={autoScrolling}
               isOpen={openSlideKey === slide.id && modN(i) === activeIdx}
               onExplore={() => setOpenSlideKey(slide.id)}
-              assignRef={(el) => { slideRefs.current[i] = el; }}
-            />
+assignRef={(el: any) => { slideRefs.current[i] = el; }}            />
           );
         })}
       </div>
