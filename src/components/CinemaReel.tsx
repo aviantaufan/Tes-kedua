@@ -246,7 +246,7 @@ export default function CinemaReel({ className }: { className?: string }) {
   useEffect(() => {
     SLIDES.forEach((slide) => {
       const img = new Image();
-      img.src = `https://images.unsplash.com/photo-${slide.imageId}?w=${imgDims.w}&h=${imgDims.h}&fit=crop&q=75&auto=format`;
+      img.src = `"https://res.cloudinary.com/hvlp65zl/image/upload/v1785079593/file_0000000042f072089da5b49504def5a5_knmywh.png",{slide.imageId}?w=${imgDims.w}&h=${imgDims.h}&fit=crop&q=75&auto=format`;
     });
   }, [imgDims.w, imgDims.h]);
 
